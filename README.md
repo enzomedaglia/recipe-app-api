@@ -7,6 +7,6 @@ by Mark Winterbottom
 TDD - Test Driven Development
 
 # Technologies
-GitHub, Docker, Docker Compose, Python, Django, flake8
+GitHub, GitHub Actions, Docker, Docker Compose, Python, Django, flake8,
 
-
+# 
