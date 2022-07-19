@@ -1,6 +1,6 @@
 # BackEnd API 
 Build a Backend REST API with Python &amp; Django - recipe-app-api
-by ####Mark Winterbottom
+by Mark Winterbottom
 
 
 # Methodology
