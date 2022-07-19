@@ -1,5 +1,10 @@
 # recipe-app-api
 Build a Backend REST API with Python &amp; Django - Mark Winterbottom
 
+# Methodology
+TDD - Test Driven Development
 
-GitHub, Docker, Docker Compose, Python, Django
+# Technologies
+GitHub, Docker, Docker Compose, Python, Django, flake8
+
+
