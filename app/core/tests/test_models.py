@@ -1,7 +1,7 @@
 """
 Tests for models.
 """
-from email.message import EmailMessage
+
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
@@ -37,4 +37,3 @@ class ModelTests(TestCase):
         """Test that creating a user without an email raises a ValueError"""
         with self.assertRaises(ValueError):
             get_user_model().objects.create_user('', 'test123')
-
