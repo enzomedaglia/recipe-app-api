@@ -1,7 +1,6 @@
 """
 Serializers for recipe APIs
 """
-from pkgutil import read_code
 from rest_framework import serializers
 
 from core.models import (

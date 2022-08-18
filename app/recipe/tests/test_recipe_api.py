@@ -1,5 +1,5 @@
 """
-Test for recipe APIs.
+Tests for recipe APIs.
 """
 from decimal import Decimal
 
@@ -31,9 +31,9 @@ def create_recipe(user, **params):
     defaults = {
         'title': 'Sample recipe title',
         'time_minutes': 22,
-        'price' : Decimal('5.25'),
+        'price': Decimal('5.25'),
         'description': 'Sample description',
-        'link': 'https://example.com/recipe.pdf',
+        'link': 'http://example.com/recipe.pdf',
     }
     defaults.update(params)
 
@@ -46,8 +46,8 @@ def create_user(**params):
     return get_user_model().objects.create_user(**params)
 
 
-class PublicRecipeAPITest(TestCase):
-    """Test unauthenticated API reuqests."""
+class PublicRecipeAPITests(TestCase):
+    """Test unauthenticated API requests."""
 
     def setUp(self):
         self.client = APIClient()
@@ -59,7 +59,6 @@ class PublicRecipeAPITest(TestCase):
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-
 class PrivateRecipeApiTests(TestCase):
     """Test authenticated API requests."""
 
@@ -68,7 +67,7 @@ class PrivateRecipeApiTests(TestCase):
         self.user = create_user(email='user@example.com', password='test123')
         self.client.force_authenticate(self.user)
 
-    def test_retrive_recipes(self):
+    def test_retrieve_recipes(self):
         """Test retrieving a list of recipes."""
         create_recipe(user=self.user)
         create_recipe(user=self.user)
@@ -143,7 +142,7 @@ class PrivateRecipeApiTests(TestCase):
             user=self.user,
             title='Sample recipe title',
             link='https://example.com/recipe.pdf',
-            description='Sample recipe description',
+            description='Sample recipe description.',
         )
 
         payload = {

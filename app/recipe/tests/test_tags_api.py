@@ -12,8 +12,8 @@ from core.models import Tag
 
 from recipe.serializers import TagSerializer
 
-TAGS_URL = reverse('recipe:tag-list')
 
+TAGS_URL = reverse('recipe:tag-list')
 
 
 def create_user(email='user@example.com', password='testpass123'):
@@ -43,7 +43,7 @@ class PrivateTagsApiTests(TestCase):
         self.client.force_authenticate(self.user)
 
     def test_retrieve_tags(self):
-        """Test retrieve a list of tags."""
+        """Test retrieving a list of tags."""
         Tag.objects.create(user=self.user, name='Vegan')
         Tag.objects.create(user=self.user, name='Dessert')
 
